@@ -117159,7 +117159,7 @@ OUTPUT(C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C
  .debug_str     0x000000000003b91d     0x4d30 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\medicine-service.cpp.o
                                       0x27d2f (size before relaxing)
  .debug_str     0x000000000004064d     0xba91 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\mother-board-new-core.ino.cpp.o
-                                      0x3c571 (size before relaxing)
+                                      0x3c55a (size before relaxing)
  .debug_str     0x000000000004c0de      0x680 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\power.cpp.o
                                        0xb241 (size before relaxing)
  .debug_str     0x000000000004c75e      0x2b1 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\rtl.cpp.o
