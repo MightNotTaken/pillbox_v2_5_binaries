@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "979d293a-f051-487f-a505-b3324608191b",
+		"name": "Pillbox-v2_5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33346244"
+	},
+	"item": [
+		{
+			"name": "V2_5",
+			"item": [
+				{
+					"name": "routes",
+					"item": [
+						{
+							"name": "device",
+							"item": [
+								{
+									"name": "find",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"where\": {\r\n        \"mac\": \"{{mac}}\"\r\n    },\r\n    \"relations\": [\"wifi\", \"medicines\"]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/pillbox/find",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"pillbox",
+												"find"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/pillbox",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"pillbox"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "set-vial-status",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\",\r\n    \"viles\": [1, 1, 1, 1, 0, 0]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/pillbox/set-vile-status",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"pillbox",
+												"set-vile-status"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "set-env",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"pillbox\",\r\n    \"env\": \"sit\",\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/device/set-env",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"set-env"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "add-credential",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"apName\": \"abcdef\",\r\n    \"apPass\": \"12345678\",\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/device/add-credential",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"add-credential"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove-credential",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"apName\": \"abcdef\",\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/device/remove-credential",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"remove-credential"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "set-volume",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"volume\" : 30,\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/device/set-volume",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"set-volume"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "set-online-status",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"status\" : true,\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/device/set-online",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"set-online"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "reset",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:3002/api/v1/device/reset",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"device",
+												"reset"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "medicines",
+							"item": [
+								{
+									"name": "edit-medicine",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\",\r\n    \"ref\": {{oldID}},\r\n    \"schedules\": [\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/20 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b1}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/20 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b2}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/21 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b3}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/21 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b4}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/22 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b5}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/22 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b6}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/23 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b7}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/23 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b8}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/24 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b9}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/05/24 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_b10}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/medicine/edit",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"medicine",
+												"edit"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove-medicine",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\",\r\n    \"reference\": [101845]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/medicine/remove",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"medicine",
+												"remove"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "set-schedules",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mac\": \"{{mac}}\",\r\n    \"schedules\": [\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/20 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_1}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/20 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_2}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/21 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_3}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/21 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_4}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/22 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_5}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/22 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_6}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/23 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_7}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/23 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_8}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/24 {{time}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_9}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        },\r\n        {\r\n            \"mac\": \"{{mac}}\",\r\n            \"type\": \"pillbox\",\r\n            \"time\": \"2025/06/24 {{time1}}\",\r\n            \"vile\": 1,\r\n            \"pills\": 2,\r\n            \"repeat\": 10,\r\n            \"reference\": {{id_10}},\r\n            \"windowSize\": 60,\r\n            \"muted\": false\r\n        }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{host}}:3002/api/v1/medicine/set-schedules",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3002",
+											"path": [
+												"api",
+												"v1",
+												"medicine",
+												"set-schedules"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "audio",
+							"item": [
+								{
+									"name": "download",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://{{host}}:3000/api/v1/audio/download?file=battery-low.mp3",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"audio",
+												"download"
+											],
+											"query": [
+												{
+													"key": "file",
+													"value": "battery-low.mp3"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "trigger",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"file\":\"/1.mp3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://192.168.4.1/audio-play",
+											"protocol": "http",
+											"host": [
+												"192",
+												"168",
+												"4",
+												"1"
+											],
+											"path": [
+												"audio-play"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "generate",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://{{host}}:3000/api/v1/audio/generate?file=ville-put-1.mp3&text=Please put vile in compartment 1",
+											"protocol": "http",
+											"host": [
+												"{{host}}"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"v1",
+												"audio",
+												"generate"
+											],
+											"query": [
+												{
+													"key": "file",
+													"value": "ville-put-1.mp3"
+												},
+												{
+													"key": "text",
+													"value": "Please put vile in compartment 1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "local-add",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/tahir/codes/pillbox/server/audio-files/alarm.mp3"
+												}
+											]
+										},
+										"url": {
+											"raw": "http://{{device-ip}}/audio-download",
+											"protocol": "http",
+											"host": [
+												"{{device-ip}}"
+											],
+											"path": [
+												"audio-download"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "local-remove",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"file\":\"/compartment-1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://{{device-ip}}/audio-remove",
+											"protocol": "http",
+											"host": [
+												"{{device-ip}}"
+											],
+											"path": [
+												"audio-remove"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "hardware",
+					"item": [
+						{
+							"name": "add credentials",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{device-ip}}/api/wifi/add?apName=fitfab&apPass=12345678",
+									"protocol": "http",
+									"host": [
+										"{{device-ip}}"
+									],
+									"path": [
+										"api",
+										"wifi",
+										"add"
+									],
+									"query": [
+										{
+											"key": "apName",
+											"value": "fitfab"
+										},
+										{
+											"key": "apPass",
+											"value": "12345678"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "remove credential",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{device-ip}}/api/wifi/id?id=0",
+									"protocol": "http",
+									"host": [
+										"{{device-ip}}"
+									],
+									"path": [
+										"api",
+										"wifi",
+										"id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get credentials",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://{{device-ip}}/api/wifi/config",
+									"protocol": "http",
+									"host": [
+										"{{device-ip}}"
+									],
+									"path": [
+										"api",
+										"wifi",
+										"config"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
