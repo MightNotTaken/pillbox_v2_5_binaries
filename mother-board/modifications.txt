@@ -1,0 +1,39 @@
+week 4 november, 2024:
+Sound Overlap:
+Problem Statement: If multiple vials are picked from the compartments at the same time, during the place-back alert, the place-back sounds overlap, resulting in a chaotic message.
+Solution: Sounds are queued. Any new sound will wait for the previous one to finish before playing.
+
+Power Hang Issue:
+Problem Statement: When the device power reduces to near zero percent, the device enters a coma state, hanging until the battery drains completely.
+Solution 1: Battery percentage values are fixed at lower bound.
+Solution 2: A battery check is applied at startup. When the device turns on, it first checks the battery. If the battery is below 5%, the device automatically turns off after playing a critically low battery sound followed by the turn-off sound.
+
+Handshake:
+Problem Statement: The device is not synced with the app screen. The Wi-Fi connected sound plays much before the confirmation appears on the screen.
+Solution: The device will wait for a handshake signal from the app before playing the sound.
+
+Static Light on Full Charge:
+Problem Statement: The battery indicator continues to blink indefinitely while charging, regardless of the battery percentage.
+Solution: The battery percentage is monitored repeatedly. If, while charging, it reaches 97%, the blinking stops, and the battery continues to charge until it reaches 100%.
+
+
+week 1 december, 2024:
+
+Device offline during OTA issue:
+Solved at server end by suppressing the disconnection log during config.
+
+Variable Window Size:
+Problem Statement: Medicine Active window is fixed to 10 minutes which is supposed to be variable
+Solution: Added functionality at firmware and server level to modify the window size.
+
+Mute Functionality:
+Problem Statement: Some of the times user does not want the pillbox to give alarm, like if he is travelling.
+Solution: Added corresponding functionality at server and firmware level to achieve the same.
+
+Battery uneven blinking:
+Problem Statement: Battery led lags after every 4-5 blinks
+Solution: Modification in blinking code
+
+Sound control:
+Problem Statement: Sound volume default to full, no change option provided
+Solution: Added sound volume control.
