@@ -61573,22 +61573,22 @@ LOAD c:/users/tahir/appdata/local/arduino15/packages/esp32/tools/xtensa-esp32-el
                 0x00000000400d0104        0xc C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                          0x8c (size before relaxing)
  .literal._ZN8Cellular17waitPacketNetworkEv
-                0x00000000400d0110       0x14 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d0110       0x18 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                          0xc8 (size before relaxing)
  .literal._ZN8Cellular11activatePDPEv
-                0x00000000400d0124       0x14 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d0128       0x14 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                          0x98 (size before relaxing)
  .literal._ZN8Cellular13configureMQTTEv
-                0x00000000400d0138       0x14 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d013c       0x14 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                          0x98 (size before relaxing)
  .literal._ZN8Cellular18openMQTTConnectionEv
-                0x00000000400d014c       0x34 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d0150       0x34 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                         0x108 (size before relaxing)
  .literal._ZN8Cellular8waitMQTTEv
-                0x00000000400d0180        0xc C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d0184        0xc C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                          0x7c (size before relaxing)
  .literal._ZN8Cellular13connectToMQTTEv
-                0x00000000400d018c       0x34 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
+                0x00000000400d0190       0x30 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
                                         0x1cc (size before relaxing)
  .literal._ZN8Cellular18disconnectFromMQTTEv
                 0x00000000400d01c0       0x10 C:\Users\Tahir\AppData\Local\arduino\sketches\D1AFBB9B1D4178695A68CB2186C595A2\sketch\cellular.cpp.o
