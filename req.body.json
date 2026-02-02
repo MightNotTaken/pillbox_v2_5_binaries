@@ -1,0 +1,108 @@
+{
+  "mac": "1C69209993A4",
+  "ref": 115614,
+  "schedules": [
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-02 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115624,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-03 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115625,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-04 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115626,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-05 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115627,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-06 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115628,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-07 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115629,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-08 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115630,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-09 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115631,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-10 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115632,
+      "windowSize": 20,
+      "muted": "1"
+    },
+    {
+      "mac": "1C69209993A4",
+      "time": "2026-02-11 18:15:00",
+      "vile": "2",
+      "pills": 1,
+      "repeat": 10,
+      "reference": 115633,
+      "windowSize": 20,
+      "muted": "1"
+    }
+  ],
+  "type": "pillbox",
+  "reference": 115614
+}
